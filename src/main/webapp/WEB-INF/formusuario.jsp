@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="menu.jsp"%>
 	<% Usuario usuario = (Usuario)request.getAttribute("usuario"); %>
 	<form action="usuariocontroller" method="post">
 		ID:<input type="number" name="id" value="<%=usuario.getId()%>"/></br>

@@ -14,10 +14,15 @@ function confirmaExclusao(id) {
 		location.href="usuariocontroller?acao=excluir&id=" + id;
 	}
 }
+function novo() {
+	location.href='usuariocontroller?acao=cadastrar';
+}
 </script>
 </head>
 <body>
+<%@include file="menu.jsp"%>
 	<table border=1>
+	<input type="button" value="Novo cadastro" onclick="javascript:novo()"/>
 	<tr> <th>id</th><th>nome</th> <th>acao</th> </tr>
 	<% 	List<Usuario> lista = (List<Usuario>)request.getAttribute("lista");
 		for(Usuario u : lista) { %>
